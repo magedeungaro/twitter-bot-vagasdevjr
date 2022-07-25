@@ -1,0 +1,35 @@
+{
+  "name": "twitter-bot-vagasdevjr",
+  "version": "1.0.0",
+  "description": "Bot to retweet job openings whose target are junior level tech professionals",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magedeungaro/twitter-bot-vagasdevjr.git"
+  },
+  "keywords": [
+    "twitter_bot"
+  ],
+  "author": "@magedeungaro & @johngvc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magedeungaro/twitter-bot-vagasdevjr/issues"
+  },
+  "homepage": "https://github.com/magedeungaro/twitter-bot-vagasdevjr#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.4",
+    "dotenv": "^16.0.1",
+    "node-cron": "^3.0.1",
+    "oauth-1.0a": "^2.2.6",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node-cron": "^3.0.2",
+    "nodemon": "^2.0.19"
+  }
+}
