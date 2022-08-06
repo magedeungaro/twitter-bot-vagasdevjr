@@ -1,8 +1,11 @@
+require('dotenv').config()
 const cron = require('node-cron')
 const dayjs = require('dayjs')
 
-const twitter = require('./apis/twitter')
+const retweetBusiness = require('./business/queryRetweetAll')
 
-// cron.schedule('1 * * * * *', async () => {
-//   console.log(`Running now at ${dayjs().format('YYYY-MM-DD HH:mm:ss')}`);
-// });
+cron.schedule(process.env.CRON_INTERVAL, async () => {
+  console.log(`Running now at ${dayjs().format('YYYY-MM-DD HH:mm:ss')}`);
+
+  retweetBusiness.queryRetweetAll()
+});
