@@ -1,7 +1,7 @@
 const twitter = require('../apis/twitter')
 const discord = require('../apis/discord')
 
-const queryRetweetAll = async () => {
+exports.queryRetweetAll = async () => {
   const tweetsData = await twitter.searchTweets()
   const maxTweets = tweetsData.meta.result_count
   const failedTweets = []
@@ -24,8 +24,5 @@ const queryRetweetAll = async () => {
   const message = `${retweetedTweets} out of ${maxTweets} tweets were successfully retweeted \n`
   if (failedTweets.length > 0) message += `Failed retweets tweet IDs: \n ${failedTweets}`
 
-
   discord.sendMessage(message)
 }
-
-queryRetweetAll()
