@@ -24,5 +24,6 @@ exports.queryRetweetAll = async () => {
   const message = `${retweetedTweets} out of ${maxTweets} tweets were successfully retweeted \n`
   if (failedTweets.length > 0) message += `Failed retweets tweet IDs: \n ${failedTweets}`
 
+  console.log(message)
   discord.sendMessage(message)
 }
